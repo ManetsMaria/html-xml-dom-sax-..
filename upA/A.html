@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html">
+	<title>Student</title>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function(){
+ $(".Box").hover(function() {
+ $(this).stop().animate({ backgroundColor: "#00cc00"}, 400);
+ },function() {
+ $(this).stop().animate({ backgroundColor: "#cc0000" }, 400);
+ });
+ });
+ </script>
+	<style type="text/css">
+	.Box {
+ 
+width: 40px;
+    height: 40px;
+    background: #cc0000;
+    border-radius: 50px;
+    border: 3px solid #000000;
+}
+ td select,
+    td input {
+      width: 150px;
+    }
+
+    label {
+      display: block;
+    }
+
+    .error input,
+    .error textarea {
+      border: 1px solid red;
+    }
+
+    .error {
+      color: red;
+    }
+	</style>
+ </head>
+ <body>
+<center>
+ <a href="A.html"><div class="Box" style="position:absolute;
+	top: 7px;
+	left: 550px;" ></div></a>
+ <a href="B.html"><div class="Box" style="
+	top: 50px;
+	left: 200px;" ></div></a>
+ <a href="C.html"><div class="Box" style="position:absolute;
+	top: 7px;
+	left: 700px;" ></div></a>
+</center>
+	
+ </head>
+ <body>
+ <form>
+ <p><input type="file" name="f"></p>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>
+          <input name="name" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>
+          <input name="last" type="text">
+        </td>
+      </tr>
+      <tr>
+        <td>Date of birth</td>
+        <td>
+          <input name="birth" type="Date">
+        </td>
+      </tr>
+      <tr>
+        <td>University</td>
+        <td>
+          <select name="university">
+            <option></option>
+            <option value="1">BSU</option>
+            <option value="2">BGUIR</option>
+            <option value="3">BNTU</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+
+    Your goal:
+    <label>
+      <textarea name="goal" style="display:block;width:400px;height:80px"></textarea>
+    </label>
+    <p><b>Choose your course</b></p>
+    <p><input name="course" type="radio" value="1"> 1</p>
+    <p><input name="course" type="radio" value="2" checked> 2</p>
+    <p><input name="course" type="radio" value="3"> 3</p>
+    <p><input name="course" type="radio" value="4"> 4</p>
+    <p>What is your favorite object?</p>
+   <p><input type="checkbox" name="a" value="UP"> UP</p>
+   <p><input type="checkbox" name="a" value="DU" > DU</p>
+   <p><input type="checkbox" name="a" value="PH" > PH</p>
+   <p><input type="checkbox" name="a" value="OS"> OS</p>
+   <p><input type="checkbox" name="a" value="TVIMS"> TVIMS</p>
+	<button type="button" onclick="validate(this.form)"><img src="ok.png" alt="ok" width="30%"></button>&nbsp;<button><img src="cancel.png" alt="cancel" width="20%"></button></p>
+  </form>
+
+  <script>
+    function showError(container, errorMessage) {
+      container.className = 'error';
+      var msgElem = document.createElement('span');
+      msgElem.className = "error-message";
+      msgElem.innerHTML = errorMessage;
+      container.appendChild(msgElem);
+    }
+
+    function resetError(container) {
+      container.className = '';
+      if (container.lastChild.className == "error-message") {
+        container.removeChild(container.lastChild);
+      }
+    }
+
+    function validate(form) {
+      var elems = form.elements;
+
+      resetError(elems.name.parentNode);
+      if (!elems.name.value) {
+        showError(elems.name.parentNode, ' Input name.');
+      }
+
+      resetError(elems.last.parentNode);
+      if (!elems.last.value) {
+        showError(elems.last.parentNode, ' Input last name.');
+    }
+    resetError(elems.birth.parentNode);
+      if (!elems.birth.value) {
+        showError(elems.birth.parentNode, ' Input date of birth.');
+    }
+      resetError(elems.university.parentNode);
+      if (!elems.university.value) {
+        showError(elems.university.parentNode, ' Choose university.');
+      }
+
+      resetError(elems.goal.parentNode);
+      if (!elems.goal.value) {
+        showError(elems.goal.parentNode, ' Input goals.');
+      }
+      resetError(elems.f.parentNode);
+      if (!elems.f.value) {
+        showError(elems.f.parentNode, ' We need photo.');
+      }
+  }
+  </script>
+ </body>
+ </html>

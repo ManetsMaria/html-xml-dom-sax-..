@@ -1,0 +1,38 @@
+<html>
+ <head>
+ <style type="text/css">
+ 	.Box {
+ 
+width: 100px;
+    height: 100px;
+    background: #cc0000;
+    border-radius: 50px;
+    border: 3px solid #000000;
+}
+ </style>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function(){
+ $(".Box").hover(function() {
+ $(this).stop().animate({ backgroundColor: "#00cc00"}, 400);
+ },function() {
+ $(this).stop().animate({ backgroundColor: "#cc0000" }, 400);
+ });
+ });
+ </script>
+	<title>Menu</title>
+ </head>
+ <body>
+ <a href="A.html"><div class="Box" style="position:absolute;
+	top: 50px;
+	left: 50px;"></div></a>
+ <a href="B.html"><div class="Box" style="position:absolute;
+	top: 50px;
+	left: 200px;"></div></a>
+ <a href="C.html"><div class="Box" style="position:absolute;
+	top: 50px;
+	left: 350px;"></div></a>
+
+ </body>
+ </html>

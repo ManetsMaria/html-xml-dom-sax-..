@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function(){
+ $(".Box").hover(function() {
+ $(this).stop().animate({ backgroundColor: "#00cc00"}, 400);
+ },function() {
+ $(this).stop().animate({ backgroundColor: "#cc0000" }, 400);
+ });
+ });
+ </script>
+ <meta http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+	.Box {
+ 
+width: 40px;
+    height: 40px;
+    background: #cc0000;
+    border-radius: 50px;
+    border: 3px solid #000000;
+}
+ td select,
+    td input {
+      width: 150px;
+    }
+
+    label {
+      display: block;
+    }
+
+   TABLE {
+    width: 100%; /* Ширина таблицы */
+    background: #fffff0; /* Цвет фона нечетных строк */
+    border: 1px solid #a52a2a; /* Рамка вокруг таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    
+   }
+   TD, TH {
+    padding: 3px; /* Поля вокруг содержимого ячейки */
+   }
+   TD {
+    text-align: center; /* Выравнивание по центру */
+    border: 1px solid #000000; /* Линия внизу ячейки */
+   }
+   TH {
+    background: #000000; /* Цвет фона */
+    color: white; /* Цвет текста */
+   }
+   TR.even {
+    background: #00cc00; /* Цвет фона четных строк */
+   }
+   .la {
+    text-align: left; /* Выравнивание по левому краю */
+   }
+  
+	</style>
+    <title>Student List</title>
+	<link rel="stylesheet" type="text/css" href="table.css">
+ </head>
+ <body>
+<center>
+ <a href="A.html"><div class="Box" style="position:absolute;
+	top: 7px;
+	left: 550px;" ></div></a>
+ <a href="B.html"><div class="Box" style="
+	top: 50px;
+	left: 200px;" ></div></a>
+ <a href="C.html"><div class="Box" style="position:absolute;
+	top: 7px;
+	left: 700px;" ></div></a>
+</center>
+<br>
+  <table>
+   <tr>
+    <th>Name</th><th>course</th><th>group</th><th>Mark</th>
+   </tr>
+   <tr class="even">
+    <td class="la">Student 1</td><td>1</td><td>1</td><td>9</td>
+   </tr>
+   <tr>
+    <td class="la">Student 2</td><td>2</td><td>4</td><td>8</td>
+   </tr>
+   <tr class="even">
+    <td class="la">Student 3</td><td>2</td><td>5</td><td>6</td>
+   </tr>
+   <tr>
+    <td class="la">Student 4</td><td>2</td><td>4</td><td>9</td>
+   </tr>
+   <tr class="even">
+    <td class="la">Student 5</td><td>4</td><td>1</td><td>9</td>
+   </tr>
+   <tr>
+    <td class="la">Student 6</td><td>2</td><td>4</td><td>8</td>
+   </tr>
+   <tr class="even">
+    <td class="la">Student 7</td><td>2</td><td>5</td><td>6</td>
+   </tr>
+   <tr>
+    <td class="la">Student 8</td><td>3</td><td>4</td><td>9</td>
+   </tr>
+  </table>
+ </body>
+</html>
